@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppCraft AI</string>
+    <string name="default_web_client_id">179635060892-jdrhki2asaq9aenc3ujgh120idvhst1r.apps.googleusercontent.com</string>
+    <string name="tagline">AI Android App Builder &amp; Architect</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_out">Sign out</string>
+    <string name="create_new_app">Create New Android App</string>
+    <string name="my_projects">My Android Projects</string>
+    <string name="ai_chat">AI App Architect</string>
+    <string name="app_templates">Starter Templates</string>
+    <string name="preview_code">Inspect Generated Code</string>
+</resources>

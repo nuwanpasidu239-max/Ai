@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-appcraft-893aba43-745f-48e4-b7b0-de8254376196",
+      "rules": "firestore.rules"
+    }
+  ]
+}

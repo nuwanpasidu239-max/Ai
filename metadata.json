@@ -1,0 +1,6 @@
+{
+  "name": "AppCraft AI",
+  "description": "AI-powered Android App Builder & Architect to design, generate, and prototype Kotlin Jetpack Compose apps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

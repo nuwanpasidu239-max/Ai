@@ -1,0 +1,69 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile and statistics",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "totalAppsCreated": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email"]
+    },
+    "AppProject": {
+      "title": "AppProject",
+      "description": "AI-generated Android app project",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "prompt": { "type": "string" },
+        "targetSdk": { "type": "number" },
+        "themeStyle": { "type": "string" },
+        "architecture": { "type": "string" },
+        "status": { "type": "string" },
+        "codeFiles": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "name", "prompt"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "AI chat message for app creation and refinement",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "projectId": { "type": "string" },
+        "role": { "type": "string" },
+        "content": { "type": "string" },
+        "codeSnippet": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "projectId", "role", "content"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile documents"
+    },
+    "/users/{userId}/projects/{projectId}": {
+      "schema": "AppProject",
+      "description": "Android projects created by the user"
+    },
+    "/users/{userId}/projects/{projectId}/messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "Chat messages between user and AI architect"
+    }
+  }
+}
